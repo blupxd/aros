@@ -1,4 +1,5 @@
 import About from "./components/About";
+import Dostupnost from "./components/Dostupnost";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Info from "./components/Info";
@@ -11,6 +12,7 @@ import SocialMedias from "./components/SocialMedias";
 function App() {
   return (
     <div className="App">
+      <Dostupnost />
       <MobileNavbar />
       <SocialMedias />
       <Navbar />
