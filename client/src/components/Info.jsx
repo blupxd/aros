@@ -30,10 +30,10 @@ const Info = () => {
     <div id="dekanti" className='flex relative overflow-hidden flex-col items-center justify-center'>
       <div
         ref={slikaRef}
-        className='absolute overflow-hidden right-[-500px] top-[900px] md:top-1/3 w-[440px] md:w-[500px]'
+        className='absolute overflow-hidden right-[-500px] top-[900px] md:top-1/3 w-[350px] md:w-[400px]'
         style={{ transform: `translateX(-${parallaxOffset}px)`, zIndex:15, overflow: 'hidden' }}
       >
-        <img className='h-auto relative right-[-15px]' src={slika2} alt="Slika 3" />
+        <img className='h-auto relative right-[-15px]' src={slika2} alt="Slika2" />
       </div>
 
       <div className='grid mx-8 md:mx-24 grid-cols-1 md:grid-cols-2 my-48 font2 items-center justify-center'>
