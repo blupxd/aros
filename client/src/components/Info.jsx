@@ -89,19 +89,19 @@ const Info = () => {
           {renderDekant(
             'https://www.harlemcandlecompany.com/cdn/shop/products/Productimageswhitebackground2000x2000_2.png?v=1696540869&width=2048',
             'Dekanti od 5ml',
-            'Želiš da znaš zašto uzeti 5ml? Okreni stranu.',
+            'Želiš da znaš zašto treba uzeti 5ml? Okreni stranu.',
             'Dobar za testiranje skupih parfema, jer su u ovoj količini pristupačniji a donosi dovoljan broj od 50 prseva.',0
           )}
           {renderDekant(
             'https://www.harlemcandlecompany.com/cdn/shop/products/Productimageswhitebackground2000x2000_2.png?v=1696540869&width=2048',
             'Dekanti od 10ml',
-            'Želiš da znaš zašto uzeti 10ml? Okreni stranu.',
+            'Želiš da znaš zašto treba uzeti 10ml? Okreni stranu.',
             'Idealna količina za putovanja u pristupačnom pakovanju gde se krije čak 100 prseva!',1
           )}
           {renderDekant(
             'https://www.harlemcandlecompany.com/cdn/shop/products/Productimageswhitebackground2000x2000_2.png?v=1696540869&width=2048',
             'Dekanti od 20ml',
-            'Želiš da znaš zašto uzeti 20ml? Okreni stranu.',
+            'Želiš da znaš zašto treba uzeti 20ml? Okreni stranu.',
             'Odličan ya duži period korišćenja parfema, jer se u boci od 20ml krije čak 200 prseva!',2
           )}
         </div>
