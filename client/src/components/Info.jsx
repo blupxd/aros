@@ -1,20 +1,55 @@
 import React, { useEffect, useRef, useState } from 'react';
 import slika4 from '../images/slika4.png';
 import slika2 from '../images/slika2.png';
-
+import ReactCardFlip from "react-card-flip";
 
 const Info = () => {
   const [parallaxOffset, setParallaxOffset] = useState(500);
   const slikaRef = useRef(null);
+  const [flip, setFlip] = useState([false, false, false]);
+
+  const renderDekant = (img, naslov, desc, info, index) => {
+    const handleFlip = () => {
+      setFlip((prevFlip) => {
+        const newFlip = [...prevFlip];
+        newFlip[index] = !newFlip[index];
+        return newFlip;
+      });
+    };
+  
+    return (
+      <ReactCardFlip isFlipped={flip[index]} flipDirection="horizontal">
+        <div className='border flex flex-col h-[500px] w-[300px] items-center justify-center border-gray-400 p-8'>
+            <img className='w-full h-64 object-cover' src={img} alt={naslov} />
+            <h1 className='text-orange-300 text-xl'>{naslov}</h1>
+            <p className='w-full py-2 border-y text-gray-700 border-black text-justify text-md'>
+              {desc}
+            </p>
+            <button onClick={handleFlip} className='px-4 py-2 bg-black text-white 
+            hover:bg-white hover:border transition duration-300 hover:text-black hover:border-black text-center w-full mt-2'>
+              Vidi više
+            </button>
+        </div>
+        <div className='border bg-black h-[500px] w-[300px] flex flex-col items-center justify-end p-8'>
+          <p className='text-white my-auto text-center text-2xl'>{info}</p>
+          <button onClick={handleFlip} className='px-4 py-2 bg-white text-black
+          hover:bg-black hover:border transition duration-300 hover:text-white hover:border-white text-center w-full mt-2'>
+            Vidi manje
+          </button>
+      </div>
+      </ReactCardFlip>
+    );
+  };
+  
 
   const parallaxScroll = () => {
     const scrolled = window.scrollY;
     const slikaOffsetTop = slikaRef.current.offsetTop;
-    const offsetBeforeActivation = -100; // Postavite vrednost prema potrebama
+    const offsetBeforeActivation = -100;
 
     if (scrolled > slikaOffsetTop - window.innerHeight / 2 - offsetBeforeActivation) {
       const calculatedOffset = (scrolled - slikaOffsetTop + window.innerHeight / 2) * 0.35;
-      const limitedOffset = Math.min(calculatedOffset, 400); // Postavite vrednost prema potrebama
+      const limitedOffset = Math.min(calculatedOffset, 400);
       setParallaxOffset(limitedOffset);
     }
   }    
@@ -53,18 +88,21 @@ const Info = () => {
         <div className='grid md:grid-cols-3 gap-8 relative'>
           {renderDekant(
             'https://www.harlemcandlecompany.com/cdn/shop/products/Productimageswhitebackground2000x2000_2.png?v=1696540869&width=2048',
+            'Dekanti od 5ml',
+            'Želiš da znaš zašto uzeti 5ml? Okreni stranu.',
+            'Dobar za testiranje skupih parfema, jer su u ovoj količini pristupačniji a donosi dovoljan broj od 50 prseva.',0
+          )}
+          {renderDekant(
+            'https://www.harlemcandlecompany.com/cdn/shop/products/Productimageswhitebackground2000x2000_2.png?v=1696540869&width=2048',
             'Dekanti od 10ml',
-            'Niste dovoljno sigurni da li će vam se parfem svideti? Najbolje za početak jeste dekant od 25ml.'
+            'Želiš da znaš zašto uzeti 10ml? Okreni stranu.',
+            'Idealna količina za putovanja u pristupačnom pakovanju gde se krije čak 100 prseva!',1
           )}
           {renderDekant(
             'https://www.harlemcandlecompany.com/cdn/shop/products/Productimageswhitebackground2000x2000_2.png?v=1696540869&width=2048',
-            'Dekanti od 15ml',
-            'Niste dovoljno sigurni da li će vam se parfem svideti? Najbolje za početak jeste dekant od 25ml.'
-          )}
-          {renderDekant(
-            'https://www.harlemcandlecompany.com/cdn/shop/products/Productimageswhitebackground2000x2000_2.png?v=1696540869&width=2048',
-            'Dekanti od 25ml',
-            'Niste dovoljno sigurni da li će vam se parfem svideti? Najbolje za početak jeste dekant od 25ml.'
+            'Dekanti od 20ml',
+            'Želiš da znaš zašto uzeti 20ml? Okreni stranu.',
+            'Odličan ya duži period korišćenja parfema, jer se u boci od 20ml krije čak 200 prseva!',2
           )}
         </div>
       </div>
@@ -72,17 +110,6 @@ const Info = () => {
   );
 }
 
-const renderDekant = (img,naslov,desc) => {
-  return(
-    <div className='border flex flex-col items-center justify-center border-gray-400 p-8'>
-      <img className='w-full h-64 object-cover' src={img} alt={naslov} />
-      <h1 className='text-orange-300 text-xl'>{naslov}</h1>
-      <p className='w-full py-2 border-y text-gray-700 border-black text-justify text-md'>
-        {desc}
-      </p>
-      <button className='px-4 py-2 bg-black text-white mt-2'>Saznaj više</button>
-    </div>
-  )
-}
+
 
 export default Info;

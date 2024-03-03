@@ -22,19 +22,19 @@ const About = () => {
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 mx-auto gap-12 text-xl text-white '>
                 <div className='flex items-center bg-black p-4'>
-                <FontAwesomeIcon icon={faPalette} className='text-4xl mr-2' />
+                <FontAwesomeIcon icon={faPalette} className='text-3xl mr-2' />
                 <span className='italic'>Ekskluzivni mirisi</span>
                 </div>
                 <div className='flex items-center bg-black p-4'>
-                <FontAwesomeIcon icon={faMagic} className='text-4xl mr-2' />
+                <FontAwesomeIcon icon={faMagic} className='text-3xl mr-2' />
                 <span className='italic'>Dekanti za nove avanture</span>
                 </div>
                 <div className='flex items-center bg-black p-4'>
-                <FontAwesomeIcon icon={faComments} className='text-4xl mr-2' />
+                <FontAwesomeIcon icon={faComments} className='text-3xl mr-2' />
                 <span className='italic'>Zajednica ljubitelja parfema</span>
                 </div>
                 <div className='flex items-center bg-black p-4'>
-                <FontAwesomeIcon icon={faHeart} className='text-4xl mr-2' />
+                <FontAwesomeIcon icon={faHeart} className='text-3xl mr-2' />
                 <span className='italic'>Ljubav prema svetu mirisa</span>
             </div>
         </div>
