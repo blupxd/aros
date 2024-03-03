@@ -15,7 +15,7 @@ const Pisite = () => {
                     </a>
                 </li>
                 <li className='w-40'>
-                    <a className='text-3xl hover:text-orange-400 transition duration-300' href="https://www.tiktok.com/aros.rs">
+                    <a className='text-3xl hover:text-orange-400 transition duration-300' href="https://www.tiktok.com/@aros.rs">
                         <FontAwesomeIcon icon={faTiktok} /> <br />Tiktok
                     </a>
                 </li>
