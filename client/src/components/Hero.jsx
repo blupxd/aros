@@ -21,7 +21,7 @@ const Hero = () => {
     <div id="pocetna" className='bg-gradient-to-b py-40 font2 from-amber-200 to-orange-300 flex flex-col items-center relative'>
       <div
         className='absolute overflow-hidden left-[-500px] md:bottom-[-350px] bottom-[-210px] lg:bottom-[-150px] w-[440px] md:w-[500px]'
-        style={{ transform: `translateX(${parallaxOffset}px)` }}
+        style={{ transform: `translateX(${parallaxOffset}px)`, zIndex:12 }}
       >
         <img className='w-full h-auto relative left-[-55px]' src={slika3} alt="Slika 3" />
       </div>
