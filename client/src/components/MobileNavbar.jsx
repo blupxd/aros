@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 
 const MobileNavbar = () => {
-  const menuItems = ["Pocetna", "Dekanti", "O nama", "Kupovina", "Pisite Nam"];
+  const menuItems = ["Pocetna", "Dekanti", "Kupovina", "O nama", "Pisite Nam"]
   const [menu, setMenu] = useState(false);
 
   return (
@@ -26,7 +26,7 @@ const MobileNavbar = () => {
           <ul className='flex flex-col  h-screen text-2xl items-center gap-12 mt-16 font-bold p-6 text-black'>
             {menuItems.map((item, index) => (
               <li className='custom-border-hover' key={index}>
-                <a href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}>{item}</a>
+                <a onClick={() => setMenu(!menu)} href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}>{item}</a>
               </li>
             ))}
           </ul>

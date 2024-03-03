@@ -20,7 +20,7 @@ const About = () => {
             </div>
             
         </div>
-        <div className='grid grid-cols-2 mx-auto gap-12 text-xl text-white '>
+        <div className='grid grid-cols-1 md:grid-cols-2 mx-auto gap-12 text-xl text-white '>
                 <div className='flex items-center bg-black p-4'>
                 <FontAwesomeIcon icon={faPalette} className='text-4xl mr-2' />
                 <span className='italic'>Ekskluzivni mirisi</span>

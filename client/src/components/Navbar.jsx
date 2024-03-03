@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Navbar = () => {
-    const menuItems = ["Pocetna", "Dekanti", "O nama", "Kupovina", "Pisite Nam"]
+    const menuItems = ["Pocetna", "Dekanti", "Kupovina", "O nama", "Pisite Nam"]
   return (
     <div className='fixed md:flex hidden w-full z-50'>
         <ul 
