@@ -1,12 +1,44 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import slika4 from '../images/slika4.png';
+import slika2 from '../images/slika2.png';
+
 
 const Info = () => {
+  const [parallaxOffset, setParallaxOffset] = useState(500);
+  const slikaRef = useRef(null);
+
+  const parallaxScroll = () => {
+    const scrolled = window.scrollY;
+    const slikaOffsetTop = slikaRef.current.offsetTop;
+    const offsetBeforeActivation = -100; // Postavite vrednost prema potrebama
+
+    if (scrolled > slikaOffsetTop - window.innerHeight / 2 - offsetBeforeActivation) {
+      const calculatedOffset = (scrolled - slikaOffsetTop + window.innerHeight / 2) * 0.35;
+      const limitedOffset = Math.min(calculatedOffset, 400); // Postavite vrednost prema potrebama
+      setParallaxOffset(limitedOffset);
+    }
+  }    
+
+  useEffect(() => {
+    window.addEventListener('scroll', parallaxScroll);
+    return () => {
+      window.removeEventListener('scroll', parallaxScroll);
+    };
+  }, []);
+
   return (
-    <div id="dekanti"  className='flex flex-col items-center justify-center'>
+    <div id="dekanti" className='flex relative overflow-hidden flex-col items-center justify-center'>
+      <div
+        ref={slikaRef}
+        className='absolute overflow-hidden right-[-500px] top-[900px] md:top-1/3 w-[440px] md:w-[500px]'
+        style={{ transform: `translateX(-${parallaxOffset}px)`, zIndex:15, overflow: 'hidden' }}
+      >
+        <img className='h-auto relative right-[-15px]' src={slika2} alt="Slika 3" />
+      </div>
+
       <div className='grid mx-8 md:mx-24 grid-cols-1 md:grid-cols-2 my-48 font2 items-center justify-center'>
-        <div className='bg-white p-12 md:w-full h-auto md:h-96'>
-          <h1 className='text-5xl text-justify'>STA SU DEKANTI I ZASTO SU DOBRI</h1>
+        <div className='bg-white p-12 md:w-full text-justify h-auto md:h-96'>
+          <h1 className='text-5xl'>STA SU DEKANTI I ZASTO SU DOBRI</h1>
           <p className='text-lg md:text-base'>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut incidunt est quibusdam, velit error repellendus!
             Exercitationem voluptatibus adipisci, officia saepe unde, non assumenda corrupti magni officiis esse ab quae fuga.
