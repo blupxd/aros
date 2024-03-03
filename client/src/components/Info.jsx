@@ -102,7 +102,7 @@ const Info = () => {
             'https://www.harlemcandlecompany.com/cdn/shop/products/Productimageswhitebackground2000x2000_2.png?v=1696540869&width=2048',
             'Dekanti od 20ml',
             'Želiš da znaš zašto treba uzeti 20ml? Okreni stranu.',
-            'Odličan ya duži period korišćenja parfema, jer se u boci od 20ml krije čak 200 prseva!',2
+            'Odličan za duži period korišćenja parfema, jer se u boci od 20ml krije čak 200 prseva!',2
           )}
         </div>
       </div>
