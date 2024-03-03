@@ -12,7 +12,7 @@ const Info = () => {
             Exercitationem voluptatibus adipisci, officia saepe unde, non assumenda corrupti magni officiis esse ab quae fuga.
           </p>
         </div>
-        <div className='w-full h-96 border-b-[5px] md:border-l-[5px] border-amber-400 bg-red-400 overflow-hidden relative'>
+        <div className='w-full h-96 border-b-[5px] border-l-0 md:border-b-0 md:border-l-[5px] border-amber-400 bg-red-400 overflow-hidden relative'>
           <img src={slika4} alt="Slika 4" className='w-full h-full object-cover' />
         </div>
       </div>
