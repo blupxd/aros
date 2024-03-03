@@ -29,18 +29,18 @@ const Hero = () => {
       <div className='text-center md:text-left'>
         <h1 className='text-8xl font-bold text-center md:text-left text-black/70 mb-4'>AROS</h1>
         <h3 className='text-5xl w-full md:w-96 text-center md:text-left text-black/50 border-b-[2px] pb-2 md:pb-4 border-white/30'>Otkrijte luksuz mirisa bez kompromisa</h3>
-        <button className='px-4 py-2 border border-black/50 text-black/50 hover:bg-black/50 hover:text-white transition duration-300 rounded-md mt-6 block mx-auto md:inline-block'>
+        <a href='#dekanti' className='px-4 py-2 border border-black/50 text-black/50 hover:bg-black/50 hover:text-white transition duration-300 rounded-md mt-6 block mx-auto md:inline-block'>
           Saznaj više
-        </button>
+        </a>
       </div>
   <div className='mt-8 md:mt-0'>
     <img className='w-full h-auto' src={slika1} alt="Slika" />
   </div>
 </div>
 
-      <button className='px-4 py-2 hover:bg-white hover:text-gray-500 transition duration-300 mt-12 border-[2px] border-white text-white'>
+      <a href="#kupovina" className='px-4 py-2 hover:bg-white hover:text-gray-500 transition duration-300 mt-12 border-[2px] border-white text-white'>
         Istrazite
-      </button>
+      </a>
     </div>
   );
 }

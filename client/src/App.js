@@ -14,8 +14,8 @@ function App() {
       <Navbar />
       <Hero />
       <Info />
-      <About />
       <Sheet />
+      <About />
     </div>
   );
 }
