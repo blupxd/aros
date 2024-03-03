@@ -22,10 +22,10 @@ const Footer = () => {
                 <h1 className='text-lg text-white border-b-[2px] border-amber-500 pb-1'>Mreže</h1>
                 <ul className='flex flex-col text-center text-xs gap-4 p-6 '>
                     <li className='custom-border-hover'>
-                        <a href='https://www.instagram.com/aros.rs'>Tiktok <FontAwesomeIcon icon={faTiktok} /></a>
+                        <a href='https://www.tiktok.com/@aros.rs'>Tiktok <FontAwesomeIcon icon={faTiktok} /></a>
                     </li>
                     <li className='custom-border-hover'>
-                        <a href='https://www.tiktok.com/@aros.rs'>Instagram <FontAwesomeIcon icon={faInstagram} /></a>
+                        <a href='https://www.instagram.com/aros.rs'>Instagram <FontAwesomeIcon icon={faInstagram} /></a>
                     </li>
                 </ul>
             </div>

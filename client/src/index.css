@@ -30,7 +30,7 @@ code {
 .custom-border-hover::before {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 50%;
   width: 0;
   height: 2px;
