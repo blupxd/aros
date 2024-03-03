@@ -38,7 +38,7 @@ const Dostupnost = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className='bg-white relative p-12 m-24 rounded-lg shadow-lg flex flex-col'
+                className='bg-white relative p-12 m-0 md:m-24 rounded-lg shadow-lg flex flex-col'
                 >
                 <button
                     onClick={() => {
