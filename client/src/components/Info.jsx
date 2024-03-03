@@ -38,7 +38,7 @@ const Info = () => {
 
       <div className='grid mx-8 md:mx-24 grid-cols-1 md:grid-cols-2 my-48 font2 items-center justify-center'>
         <div className='bg-white p-12 md:w-full text-justify h-auto md:h-96'>
-          <h1 className='text-5xl'>STA SU DEKANTI I ZASTO SU DOBRI</h1>
+          <h1 className='text-5xl'>ŠTA SU DEKANTI I ZAŠTO SU DOBRI</h1>
           <p className='text-lg md:text-base'>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut incidunt est quibusdam, velit error repellendus!
             Exercitationem voluptatibus adipisci, officia saepe unde, non assumenda corrupti magni officiis esse ab quae fuga.
@@ -49,7 +49,7 @@ const Info = () => {
         </div>
       </div>
       <div id="kupovina" className='bg-white flex flex-col justify-center font2 p-8 md:p-24 items-center w-full'>
-        <h1 className='text-6xl text-orange-300 font-bold text-center py-12 md:py-24'>PRONADJITE PARFEM ZA VAS</h1>
+        <h1 className='text-6xl text-orange-300 font-bold text-center py-12 md:py-24'>PRONAĐITE PARFEM ZA VAS</h1>
         <div className='grid md:grid-cols-3 gap-8 relative'>
           {renderDekant(
             'https://www.harlemcandlecompany.com/cdn/shop/products/Productimageswhitebackground2000x2000_2.png?v=1696540869&width=2048',
@@ -80,7 +80,7 @@ const renderDekant = (img,naslov,desc) => {
       <p className='w-full py-2 border-y text-gray-700 border-black text-justify text-md'>
         {desc}
       </p>
-      <button className='px-4 py-2 bg-black text-white mt-2'>Saznaj vise</button>
+      <button className='px-4 py-2 bg-black text-white mt-2'>Saznaj više</button>
     </div>
   )
 }

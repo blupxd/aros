@@ -13,7 +13,7 @@ const SocialMedias = () => {
                 </a>
             </li>
             <li>
-                <a className='hover:text-amber-400 transition duration-300' href="https://www.tiktok.com/aros.rs">
+                <a className='hover:text-amber-400 transition duration-300' href="https://www.tiktok.com/@aros.rs">
                     <FontAwesomeIcon icon={faTiktok} />
                 </a>
             </li>
