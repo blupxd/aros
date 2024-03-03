@@ -19,3 +19,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.custom-border-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-border-hover::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #71510b; /* Boja granice */
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.custom-border-hover:hover::before {
+  width: 100%;
+  left: 0;
+}

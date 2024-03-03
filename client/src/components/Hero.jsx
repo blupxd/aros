@@ -1,32 +1,29 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import slika1 from '../images/slika1.png';
 import slika3 from '../images/slika3.png';
 
 const Hero = () => {
-  const parallaxRef = useRef(null);
-  const startScrollY = window.innerWidth <= 768 ? 500 : 0;
+  const [parallaxOffset, setParallaxOffset] = useState(-500); // Adjust the initial offset
+
+  const parallaxScroll = () => {
+    const scrolled = window.scrollY;
+    setParallaxOffset(Math.min(scrolled * 0.6, 400)); // Adjust the factor based on your preference
+  };
 
   useEffect(() => {
-    const parallaxScroll = () => {
-      if (parallaxRef.current && window.scrollY >= startScrollY) {
-        const scrolled = window.scrollY - startScrollY;
-        const parallaxValue = scrolled * 0.2;
-        const limitedParallaxValue = Math.min(parallaxValue, 100);
-
-        parallaxRef.current.style.transform = `translateX(${limitedParallaxValue}px)`;
-      }
-    };
-
     window.addEventListener('scroll', parallaxScroll);
-
     return () => {
       window.removeEventListener('scroll', parallaxScroll);
     };
-  }, [startScrollY]);
+  }, []);
+
   return (
-    <div className='bg-gradient-to-b py-24 from-amber-200 to-orange-300 flex flex-col items-center'>
-      <div className='absolute overflow-hidden left-[-250px] md:bottom-[-350px] bottom-[-450px] lg:bottom-[-300px] w-[440px] md:w-[500px]' ref={parallaxRef}>
-        <img className='w-full h-auto relative left-[-10px]' src={slika3} alt="Slika 3" />
+    <div className='bg-gradient-to-b py-24 from-amber-200 to-orange-300 flex flex-col items-center relative'>
+      <div
+        className='absolute overflow-hidden left-[-500px] md:bottom-[-350px] bottom-[-210px] lg:bottom-[-300px] w-[440px] md:w-[500px]'
+        style={{ transform: `translateX(${parallaxOffset}px)` }}
+      >
+        <img className='w-full h-auto relative left-[-55px]' src={slika3} alt="Slika 3" />
       </div>
       <div className='grid items-center grid-cols-1 md:grid-cols-2 mx-24 md:mx-12 md:px-8 lg:px-32'>
       <div className='text-center md:text-left'>

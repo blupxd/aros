@@ -3,14 +3,14 @@ import React from 'react'
 const Navbar = () => {
     const menuItems = ["Pocetna", "Dekanti", "O nama", "Porucivanje", "Kontakt"]
   return (
-    <div className='fixed hidden w-full z-50'>
+    <div className='fixed md:flex hidden w-full z-50'>
         <ul 
-        className='flex items-center 
+        className='flex w-full items-center 
         justify-center gap-12 font-bold
-        p-6 text-sm
-        bg-gradient-to-b from-gray-950/30 to-transparent backdrop-blur-md'>
+        p-6
+        bg-gradient-to-b from-gray-950/30 to-white/20 backdrop-blur-md'>
             {menuItems.map((item, index) => (
-            <li key={index}>
+            <li className='custom-border-hover text-black text-lg font2' key={index}>
                 <a href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}>{item}</a>
             </li>
             ))}
