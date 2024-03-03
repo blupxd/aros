@@ -1,3 +1,4 @@
+import About from "./components/About";
 import Hero from "./components/Hero";
 import Info from "./components/Info";
 import MobileNavbar from "./components/MobileNavbar";
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <Hero />
       <Info />
+      <About />
       <Sheet />
     </div>
   );

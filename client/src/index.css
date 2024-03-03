@@ -31,7 +31,7 @@ code {
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: #71510b; /* Boja granice */
+  background-color: #f8ad0b; /* Boja granice */
   transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
