@@ -1,13 +1,32 @@
-import React from 'react'
-import data from '../data/parfemi.json'
+import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMars, faVenus, faVenusMars } from '@fortawesome/free-solid-svg-icons'
 import { useDispatch } from 'react-redux'
 import { postaviTipParfema } from '../actions/parfemAction'
+import axios from 'axios'
 
 
 const Sheet = () => {
-    const parfemi = data;
+    const [parfemi, setParfemi] = useState([])
+
+    useEffect(() => {
+        const fetchPerfumes = async () => {
+          try {
+            const userToken = localStorage.getItem('user');
+            const response = await axios.get('http://localhost:5000/parfemi', {
+              headers: {
+                Authorization: `Bearer ${userToken}`,
+              },
+            });
+            setParfemi(response.data);
+          } catch (error) {
+            console.error('Error fetching perfumes:', error.message);
+          }
+        };
+    
+        fetchPerfumes();
+      }, []);
+    
     const dispatch = useDispatch()
   return (
     <div className='bg-black p-12'>
