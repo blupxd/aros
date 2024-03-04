@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./components/About";
 import Dostupnost from "./components/Dostupnost";
 import Footer from "./components/Footer";
@@ -8,21 +9,32 @@ import Navbar from "./components/Navbar";
 import Pisite from "./components/Pisite";
 import Sheet from "./components/Sheet";
 import SocialMedias from "./components/SocialMedias";
+import Admin from "./components/Admin";
+import Login from "./components/Login";
 
 function App() {
   return (
-    <div className="App">
-      <Dostupnost />
-      <MobileNavbar />
-      <SocialMedias />
-      <Navbar />
-      <Hero />
-      <Info />
-      <Sheet />
-      <About />
-      <Pisite />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Dostupnost />
+            <MobileNavbar />
+            <SocialMedias />
+            <Navbar />
+            <Hero />
+            <Info />
+            <Sheet />
+            <About />
+            <Pisite />
+            <Footer />
+          </>
+        } />
+        
+        <Route path="/admin-login" element={<Login />} />
+        <Route path="/specijalna-ruta-za-admina" element={<Admin />} />
+      </Routes>
+    </Router>
   );
 }
 
