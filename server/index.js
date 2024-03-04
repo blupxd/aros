@@ -15,14 +15,15 @@ app.use(cors())
 app.use('/auth', authRoute);
 app.use('/parfemi', listRoute)
 
-app.listen(PORT, () => {
-    console.log("Listening on port " + PORT)
-    mongoose.connect(connectionString)
+mongoose.connect(connectionString)
     .then(() => {
       console.log('Connected to MongoDB');
     })
     .catch((error) => {
       console.error('Error connecting to MongoDB:', error.message);
     });
+app.listen(PORT, () => {
+    console.log("Listening on port " + PORT)
+    
     
 })
