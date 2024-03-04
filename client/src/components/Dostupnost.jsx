@@ -1,19 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose, faSearch } from '@fortawesome/free-solid-svg-icons';
-import data from '../data/parfemi.json';
 import { useDispatch, useSelector } from 'react-redux';
 import { postaviTipParfema } from '../actions/parfemAction';
 import { motion, AnimatePresence } from 'framer-motion';
+import axios from 'axios';
 
 const Dostupnost = () => {
     const [toggle, setToggle] = useState(false)
     const [searchTerm, setSearchTerm] = useState('');
-    const parfemi = data;
     const dispatch = useDispatch();
     const tip = useSelector((state) => state.tip);
 
+    const [parfemi, setParfemi] = useState([])
 
+    useEffect(() => {
+        const fetchPerfumes = async () => {
+          try {
+            const userToken = localStorage.getItem('user');
+            const response = await axios.get('https://aros-b4l2.vercel.app/parfemi', {
+              headers: {
+                Authorization: `Bearer ${userToken}`,
+              },
+            });
+            setParfemi(response.data);
+          } catch (error) {
+            console.error('Error fetching perfumes:', error.message);
+          }
+        };
+    
+        fetchPerfumes();
+      }, []);
     useEffect(() => {
         if (tip === '') setToggle(false);
         else setToggle(true);
