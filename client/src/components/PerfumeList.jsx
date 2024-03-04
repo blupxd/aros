@@ -13,7 +13,7 @@ const PerfumeList = () => {
     const fetchPerfumes = async () => {
       try {
         const userToken = localStorage.getItem('user');
-        const response = await axios.get('http://localhost:5000/parfemi', {
+        const response = await axios.get('https://aros-b4l2.vercel.app/parfemi', {
           headers: {
             Authorization: `Bearer ${userToken}`,
           },
@@ -38,7 +38,7 @@ const PerfumeList = () => {
   const handleConfirmDelete = async () => {
     try {
       const userToken = localStorage.getItem('user');
-      await axios.delete(`http://localhost:5000/parfemi/${deletingPerfume._id}`, {
+      await axios.delete(`https://aros-b4l2.vercel.app/parfemi/${deletingPerfume._id}`, {
         headers: {
           Authorization: `Bearer ${userToken}`,
         },
@@ -53,7 +53,7 @@ const PerfumeList = () => {
   const handleConfirmEdit = async (editedPerfume) => {
     try {
       const userToken = localStorage.getItem('user');
-      await axios.put(`http://localhost:5000/parfemi/${editingPerfume._id}`, editedPerfume, {
+      await axios.put(`https://aros-b4l2.vercel.app/parfemi/${editingPerfume._id}`, editedPerfume, {
         headers: {
           Authorization: `Bearer ${userToken}`,
         },

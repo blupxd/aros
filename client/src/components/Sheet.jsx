@@ -13,7 +13,7 @@ const Sheet = () => {
         const fetchPerfumes = async () => {
           try {
             const userToken = localStorage.getItem('user');
-            const response = await axios.get('http://localhost:5000/parfemi', {
+            const response = await axios.get('https://aros-b4l2.vercel.app/parfemi', {
               headers: {
                 Authorization: `Bearer ${userToken}`,
               },

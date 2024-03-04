@@ -13,7 +13,7 @@ const AddPerfumeForm = () => {
         return;
       }
       const response = await axios.post(
-        'http://localhost:5000/parfemi',
+        'https://aros-b4l2.vercel.app/parfemi',
         newPerfume,
         {
           headers: {
