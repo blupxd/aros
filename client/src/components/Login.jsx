@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import {PulseLoader } from 'react-spinners'
 
 const Login = () => {
   const [loginData, setLoginData] = useState({
@@ -10,6 +11,7 @@ const Login = () => {
 
   const [error, setError] = useState(null);
   const history = useNavigate();
+  const [loader, setLoader] = useState(false)
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -18,7 +20,7 @@ const Login = () => {
         username: loginData.username,
         password: loginData.password,
       });
-
+      setLoader(!loader)
       localStorage.setItem('user', response.data.token);
       history('/specijalna-ruta-za-admina');
     } catch (error) {
@@ -60,6 +62,7 @@ const Login = () => {
             }`}
             id="password"
             type="password"
+            placeholder="Password"
             value={loginData.password}
             onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
           />
@@ -70,13 +73,14 @@ const Login = () => {
             <p className="text-sm">{error}</p>
           </div>
         )}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col items-center gap-4 justify-between">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
             Sign In
           </button>
+          {loader ? <PulseLoader color="#3b82f6" /> : null}
         </div>
       </form>
     </div>
