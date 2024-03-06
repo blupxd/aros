@@ -95,7 +95,6 @@ const Dostupnost = () => {
                       (parfem.naziv.toLowerCase().includes(searchTerm.toLowerCase()) ||
                         parfem.kuca.toLowerCase().includes(searchTerm.toLowerCase()))
                   )
-                  .slice(0, 20)
                   .map((x, key) => (
                     <div key={key} className='border-b-[1px] border-gray-500 p-2 flex flex-col'>
                       <h2 className='text-sm text-black font-semibold'>{x.naziv}</h2>
