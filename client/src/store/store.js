@@ -1,4 +1,10 @@
-import { createStore } from 'redux'
+import { combineReducers, createStore } from 'redux'
 import parfemReducer from '../reducers/parfemReducer';
+import renderReducer from '../reducers/renderReducer';
 
-export const store = createStore(parfemReducer);
+const reducers = combineReducers({
+    parfem: parfemReducer,
+    render: renderReducer
+});
+
+export const store = createStore(reducers)

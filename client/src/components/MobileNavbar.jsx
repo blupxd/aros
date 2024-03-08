@@ -1,6 +1,7 @@
 import { faBars, faHome, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
+import logo from '../images/logo.png'
 
 const MobileNavbar = () => {
   const menuItems = ["Početna", "Dekanti", "Kupovina", "O nama", "Pišite Nam"]
@@ -18,6 +19,9 @@ const MobileNavbar = () => {
         {menu ? <FontAwesomeIcon icon={faTimes} />
           : <FontAwesomeIcon icon={faBars} />}
       </button>
+      <a href="#početna" className='absolute top-1 right-4'>
+        <img src={logo} alt="logo" className='w-10' />
+      </a>
       <div
         className={`transition-transform w-full duration-500 transform ${menu ? 'translate-x-0' : 'translate-x-full'
           } md:hidden overflow-hidden`}

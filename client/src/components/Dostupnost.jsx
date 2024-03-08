@@ -10,7 +10,7 @@ const Dostupnost = () => {
     const [toggle, setToggle] = useState(false)
     const [searchTerm, setSearchTerm] = useState('');
     const dispatch = useDispatch();
-    const tip = useSelector((state) => state.tip);
+    const tip = useSelector((state) => state.parfem.tip);
 
     const [parfemi, setParfemi] = useState([])
 

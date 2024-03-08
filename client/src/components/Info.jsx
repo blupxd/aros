@@ -74,9 +74,10 @@ const Info = () => {
       <div className='grid mx-8 md:mx-24 grid-cols-1 md:grid-cols-2 my-48 font2 items-center justify-center'>
         <div className='bg-white p-12 md:w-full text-justify h-auto md:h-96'>
           <h1 className='text-5xl'>ŠTA SU DEKANTI I ZAŠTO SU DOBRI</h1>
-          <p className='text-lg md:text-base'>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut incidunt est quibusdam, velit error repellendus!
-            Exercitationem voluptatibus adipisci, officia saepe unde, non assumenda corrupti magni officiis esse ab quae fuga.
+          <p className='text-lg md:text-base text-justify'>
+          Kada se govori o dekantiranju parfema, to se obično odnosi na proces prelivanja ili prenosa manje količine parfema iz originalnog pakovanja u manju bocu ili posudu, poznatu kao dekanter.<br />
+          Ovaj postupak je često popularan među ljubiteljima parfema koji žele prenositi svoje omiljene mirise u manje, prenosive bočice radi lakšeg nošenja ili putovanja.<br />
+          Dekantiranje parfema omogućava precizniju dozu mirisa i često je korisno kako biste izbegli nošenje velike originalne bočice parfema.
           </p>
         </div>
         <div className='w-full h-96 border-b-[5px] border-l-0 md:border-b-0 md:border-l-[5px] border-amber-400 bg-red-400 overflow-hidden relative'>

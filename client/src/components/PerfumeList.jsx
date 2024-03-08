@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { useSelector } from 'react-redux';
 
 const PerfumeList = () => {
   const [parfemi, setParfemi] = useState([]);
   const [editingPerfume, setEditingPerfume] = useState(null);
   const [deletingPerfume, setDeletingPerfume] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
+  const stanjeRender = useSelector((state) => state.render.render)
 
   useEffect(() => {
     const fetchPerfumes = async () => {
@@ -25,7 +27,7 @@ const PerfumeList = () => {
     };
 
     fetchPerfumes();
-  }, []);
+  }, [stanjeRender]);
 
   const handleEdit = (parfem) => {
     setEditingPerfume(parfem);
@@ -89,7 +91,7 @@ const PerfumeList = () => {
         <FontAwesomeIcon className='absolute right-8 text-gray-500' icon={faSearch} />
       </div>
       <div className='flex flex-col h-96 overflow-auto gap-12 md:gap-4 '>
-        {parfemi && filteredParfemi.map((x, key) => (
+        {parfemi && filteredParfemi.reverse().map((x, key) => (
           <div className='grid grid-cols-1 md:grid-cols-3 justify-between' key={key}>
             <div className='bg-white p-2 border-b col-span-1 md:col-span-2 w-full border-black flex flex-col'>
               <h2 className='text-sm text-black font-semibold'>{x.naziv}</h2>

@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { ucitajPonovo } from '../actions/rerenderAction';
 
 const AddPerfumeForm = () => {
   const [newPerfume, setNewPerfume] = useState({ naziv: '', kuca: '', tip: 'muski' });
   const [error, setError] = useState(null);
+  const dispatch = useDispatch()
 
   const handleAddPerfume = async () => {
     try {
@@ -21,7 +24,7 @@ const AddPerfumeForm = () => {
           },
         }
       );
-
+        dispatch(ucitajPonovo('UCITAJ_PONOVO'))
       console.log('Dodat novi parfem:', response.data);
       setNewPerfume({ naziv: '', kuca: '', tip: '' });
       setError(null);

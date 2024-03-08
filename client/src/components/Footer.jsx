@@ -2,6 +2,7 @@ import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import logo2 from '../images/logo2.png'
 
 const Footer = () => {
     const menuItems = ["Početna", "Dekanti", "Kupovina", "O nama", "Pišite Nam"]
@@ -36,7 +37,8 @@ const Footer = () => {
                 </a>
             </div>
         </div>
-        <div className='bg-gray-950/70 text-gray-700 text-xs text-center w-full p-12'>
+        <div className='bg-gray-950/70 text-gray-700 text-xs flex flex-col items-center justify-center text-center w-full p-12'>
+            <img src={logo2} alt="logo" className='w-12 mb-4 opacity-20'/>
             <h1>© 2024 AROS Dekanti</h1>
         </div>
     </div>
