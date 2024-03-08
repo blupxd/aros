@@ -28,11 +28,10 @@ const Hero = () => {
       </div>
       <div className='grid items-center grid-cols-1 md:grid-cols-2 mx-24 md:mx-12 md:px-8 lg:px-32'>
       <div className='text-center md:text-left'>
-        <div className='flex items-center gap-4 mb-4'>
+        <div className='flex items-center justify-center gap-4 mb-4'>
           <img src={logo} alt="logo" className='w-24 opacity-70'/>
           <h1 className='text-8xl font-bold text-center md:text-left text-black/70 mt-8'>AROS</h1>
         </div>
-        
         <h3 className='text-5xl w-full md:w-96 text-center md:text-left text-black/50 border-b-[2px] pb-2 md:pb-4 border-white/30'>Otkrijte luksuz mirisa bez kompromisa</h3>
         <a href='#dekanti' className='px-4 py-2 border border-black/50 text-black/50 hover:bg-black/50 hover:text-white transition duration-300 rounded-md mt-6 block mx-auto md:inline-block'>
           Saznaj više
