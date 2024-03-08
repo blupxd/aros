@@ -25,8 +25,8 @@ const Info = () => {
           className='border flex flex-col h-[500px] w-[300px] items-center justify-center border-gray-400 p-8'
         >
           <img className='w-full h-64 object-cover' src={img} alt={naslov} />
-          <h1 className='text-orange-300 text-xl'>{naslov}</h1>
-          <p className='w-full py-2 border-y text-gray-700 border-black text-justify text-md'>
+          <h1 className='text-orange-300 text-xl font2'>{naslov}</h1>
+          <p className='w-full py-2 border-y text-gray-700 border-black text-justify text-sm'>
             {desc}
           </p>
           <button onClick={handleFlip} className='px-4 py-2 bg-black text-white 
@@ -78,9 +78,9 @@ const Info = () => {
         <img className='h-auto relative right-[-15px]' src={slika2} alt="Slika2" />
       </div>
 
-      <div className='grid mx-8 md:mx-24 grid-cols-1 md:grid-cols-2 my-48 font2 items-center justify-center'>
+      <div className='grid mx-8 md:mx-32 grid-cols-1 md:grid-cols-2 my-48  items-center justify-center'>
         <div className='bg-white p-12 md:w-full text-justify h-auto md:h-96'>
-          <motion.h1 className='text-5xl' transition={{ duration: 0.4, ease: 'easeInOut' }} initial={{ opacity: 0, x: -100 }} animate={controls}>
+          <motion.h1 className='text-4xl font2' transition={{ duration: 0.4, ease: 'easeInOut' }} initial={{ opacity: 0, x: -100 }} animate={controls}>
             ŠTA SU DEKANTI I ZAŠTO SU DOBRI
           </motion.h1>
           <motion.p className='text-lg md:text-base text-justify' initial={{ opacity: 0, x: -100 }} animate={controls} transition={{ duration: 0.3, ease: 'easeInOut' }}>
@@ -100,9 +100,9 @@ const Info = () => {
       </div>
       <div
         id="kupovina"
-        className='bg-white flex flex-col justify-center font2 p-8 md:p-24 items-center w-full'
+        className='bg-white flex flex-col justify-center p-8 md:p-20 items-center w-full'
       >
-        <h1 className='text-6xl text-orange-300 font-bold text-center py-12 md:py-24'>
+        <h1 className='text-6xl text-orange-300 font2 font-bold text-center py-12 md:py-24'>
           PRONAĐITE PARFEM ZA VAS
         </h1>
         <div className='grid md:grid-cols-3 gap-8 relative'>

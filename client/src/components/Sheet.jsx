@@ -47,7 +47,7 @@ const Sheet = () => {
       ref={headerRef}
       className='bg-black p-12'>
       <motion.h1
-        className='font2 text-white text-5xl md:text-7xl'
+        className='font2 text-white text-5xl ml-24 md:text-7xl'
         initial={{ opacity: 0, x: -50 }}
         animate={controls}
         transition={{ duration: 0.5, ease: 'easeInOut'}}
@@ -63,7 +63,7 @@ const Sheet = () => {
         initial={{ opacity: 0, x: -50}}
         animate={controls}
         transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.4}}
-        className='grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-12 w-full'>
+        className='grid grid-cols-1 lg:grid-cols-3 px-2 md:px-24 gap-4 w-full'>
         {parfemi.length &&
           ['muski', 'zenski', 'unisex'].map((tip, index) => (
             <div

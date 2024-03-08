@@ -32,7 +32,7 @@ const Footer = () => {
             </div>
             <div className='p-2 flex flex-col items-center justify-start gap-4'>
                 <h1 className='text-lg text-white border-b-[2px] border-amber-500 pb-1'>Kontakt</h1>
-                <a className='custom-border-hover text-xs p-6' href="mailto:arosbusiness@gmail.com">
+                <a className='custom-border-hover text-xs pb-1' href="mailto:arosbusiness@gmail.com">
                     <FontAwesomeIcon icon={faEnvelope} /> arosbusiness@gmail.com
                 </a>
             </div>
