@@ -47,7 +47,7 @@ const Sheet = () => {
       ref={headerRef}
       className='bg-black p-12'>
       <motion.h1
-        className='font2 text-white text-5xl ml-24 md:text-7xl'
+        className='font2 text-white text-5xl ml-0 md:ml-24 md:text-7xl'
         initial={{ opacity: 0, x: -50 }}
         animate={controls}
         transition={{ duration: 0.5, ease: 'easeInOut'}}

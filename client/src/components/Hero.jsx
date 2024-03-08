@@ -30,7 +30,7 @@ const Hero = () => {
       className='bg-gradient-to-b py-40 font2 from-amber-200 to-orange-300 flex flex-col items-center relative'
     >
       <div
-        className='absolute overflow-hidden left-[-500px] md:bottom-[-350px] bottom-[-210px] lg:bottom-[-150px] w-[440px] md:w-[500px]'
+        className='absolute overflow-hidden left-[-500px] md:bottom-[-240px] bottom-[-210px] lg:bottom-[-150px] w-[440px] md:w-[500px]'
         style={{ transform: `translateX(${parallaxOffset}px)`, zIndex: 12 }}
       >
         <img
@@ -49,7 +49,7 @@ const Hero = () => {
            animate={controls}
           className='text-center md:text-left' >
           <div className='flex items-center justify-center md:justify-start gap-4 mb-4'>
-            <img src={logo} alt="logo" className='w-24 opacity-70' />
+            <img src={logo} alt="logo" className='w-24 opacity-70 mb-4' />
             <h1 className='text-8xl font-bold text-center md:text-left text-black opacity-70 mt-8'>
               AROS
             </h1>

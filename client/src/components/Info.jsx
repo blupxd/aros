@@ -3,6 +3,7 @@ import slika4 from '../images/slika4.png';
 import slika2 from '../images/slika2.png';
 import ReactCardFlip from "react-card-flip";
 import { motion, useAnimation } from 'framer-motion';
+import {Reveal} from './Reveal.tsx'
 
 const Info = () => {
   const [parallaxOffset, setParallaxOffset] = useState(500);
@@ -20,6 +21,7 @@ const Info = () => {
     };
   
     return (
+      <Reveal>
       <ReactCardFlip isFlipped={flip[index]} flipDirection="horizontal">
         <div
           className='border flex flex-col h-[500px] w-[300px] items-center justify-center border-gray-400 p-8'
@@ -44,6 +46,7 @@ const Info = () => {
           </button>
         </div>
       </ReactCardFlip>
+      </Reveal>
     );
   };
   
@@ -72,25 +75,25 @@ const Info = () => {
     <div id="dekanti" className='flex relative overflow-hidden flex-col items-center justify-center'>
       <div
         ref={slikaRef}
-        className='absolute overflow-hidden right-[-500px] top-[900px] md:top-1/3 w-[350px] md:w-[400px]'
+        className='absolute overflow-hidden right-[-500px] top-[1000px] md:top-1/3 w-[350px] md:w-[400px]'
         style={{ transform: `translateX(-${parallaxOffset}px)`, zIndex: 15, overflow: 'hidden' }}
       >
         <img className='h-auto relative right-[-15px]' src={slika2} alt="Slika2" />
       </div>
 
-      <div className='grid mx-8 md:mx-32 grid-cols-1 md:grid-cols-2 my-48  items-center justify-center'>
-        <div className='bg-white p-12 md:w-full text-justify h-auto md:h-96'>
+      <div className='grid mx-8 md:mx-32 grid-cols-1 md:grid-cols-2 my-48 justify-center items-top'>
+        <div className='bg-white p-12 md:w-full text-justify h-full '>
           <motion.h1 className='text-4xl font2' transition={{ duration: 0.4, ease: 'easeInOut' }} initial={{ opacity: 0, x: -100 }} animate={controls}>
             ŠTA SU DEKANTI I ZAŠTO SU DOBRI
           </motion.h1>
-          <motion.p className='text-lg md:text-base text-justify' initial={{ opacity: 0, x: -100 }} animate={controls} transition={{ duration: 0.3, ease: 'easeInOut' }}>
+          <motion.p className='text-lg md:text-sm text-justify' initial={{ opacity: 0, x: -100 }} animate={controls} transition={{ duration: 0.3, ease: 'easeInOut' }}>
             Kada se govori o dekantiranju parfema, to se obično odnosi na proces prelivanja ili prenosa manje količine parfema iz originalnog pakovanja u manju bocu ili posudu, poznatu kao dekanter.
             Ovaj postupak je često popularan među ljubiteljima parfema koji žele prenositi svoje omiljene mirise u manje, prenosive bočice radi lakšeg nošenja ili putovanja.
             Dekantiranje parfema omogućava precizniju dozu mirisa i često je korisno kako biste izbegli nošenje velike originalne bočice parfema.
           </motion.p>
         </div>
         <motion.div
-          className='w-full h-96 border-b-[5px] border-l-0 md:border-b-0 md:border-l-[5px] border-amber-400 bg-red-400 overflow-hidden relative'
+          className='w-full h-full border-b-[5px] border-l-0 md:border-b-0 md:border-l-[5px] border-amber-400 bg-red-400 overflow-hidden relative'
           initial={{ opacity: 0, x: 100 }}
           animate={controls}
           transition={{ duration: 0.25, ease: 'easeInOut' }}
