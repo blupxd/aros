@@ -1,9 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import slika4 from '../images/slika4.png';
+import slika4 from '../images/slika4.jpg';
 import slika2 from '../images/slika2.png';
 import ReactCardFlip from "react-card-flip";
 import { motion, useAnimation } from 'framer-motion';
 import {Reveal} from './Reveal.tsx'
+import slika5 from '../images/10ml.jpg'
+import slika3 from '../images/20ml.jpg'
+import slika1 from '../images/5ml.jpg'
 
 const Info = () => {
   const [parallaxOffset, setParallaxOffset] = useState(500);
@@ -109,19 +112,19 @@ const Info = () => {
         </h1>
         <div className='grid md:grid-cols-3 gap-8 relative'>
           {renderDekant(
-            'https://www.harlemcandlecompany.com/cdn/shop/products/Productimageswhitebackground2000x2000_2.png?v=1696540869&width=2048',
+            slika1,
             'Dekanti od 5ml',
             'Želiš da znaš zašto treba uzeti 5ml? Okreni stranu.',
             'Dobar za testiranje skupih parfema, jer su u ovoj količini pristupačniji a donosi dovoljan broj od 50 prseva.', 0
           )}
           {renderDekant(
-            'https://www.harlemcandlecompany.com/cdn/shop/products/Productimageswhitebackground2000x2000_2.png?v=1696540869&width=2048',
+            slika5,
             'Dekanti od 10ml',
             'Želiš da znaš zašto treba uzeti 10ml? Okreni stranu.',
             'Idealna količina za putovanja u pristupačnom pakovanju gde se krije čak 100 prseva!', 1
           )}
           {renderDekant(
-            'https://www.harlemcandlecompany.com/cdn/shop/products/Productimageswhitebackground2000x2000_2.png?v=1696540869&width=2048',
+            slika3,
             'Dekanti od 20ml',
             'Želiš da znaš zašto treba uzeti 20ml? Okreni stranu.',
             'Odličan za duži period korišćenja parfema, jer se u boci od 20ml krije čak 200 prseva!', 2
